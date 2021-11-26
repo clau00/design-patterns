@@ -1,4 +1,4 @@
-package com.company.delegationPrinciples;
+package com.company.delegationPrinciple;
 
 class RealPrinter {
 	// the "delegate"
