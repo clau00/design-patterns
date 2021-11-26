@@ -14,17 +14,20 @@ public class Employee {
 	private String address;
 	private Date dateOfJoining;
 
-	public boolean isPromotionDueThisYear() {
-		// promotion logic
+	// moved this methods to the corresponding classes
+	// promotion to HRPromotions and income tax to Finance
 
-		return false;
-	}
-
-	public double calcIncomeTaxForCurrentYear() {
-		// income tax logic
-
-		return 0L;
-	}
+//	public boolean isPromotionDueThisYear() {
+//		// promotion logic
+//
+//		return false;
+//	}
+//
+//	public double calcIncomeTaxForCurrentYear() {
+//		// income tax logic
+//
+//		return 0L;
+//	}
 
 	// getters and setters for all member variables
 }
