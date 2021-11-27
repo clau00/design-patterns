@@ -11,19 +11,33 @@ public interface ShapeInterface {
 
 interface SolidShapeInterface {
 
-	// as a solution, we create 2 interfaces, each one with its specific functionality
+	// as a solution, we created another interface containing the volume() method for the solid shapes
+	// now, each interface has a specific functionality
 	public double volume();
+
+	// now, we have shapes implementing the 1st, the 2nd, or both interfaces.
+	// the clients should know the methods to call for each shape, so,
+	// we implement another shape with "calculate()" method
 }
 
-class Square implements ShapeInterface {
+interface ManageShapeInterface {
+	public double calculate();
+}
+
+class Square implements ShapeInterface, ManageShapeInterface {
 
 	@Override
 	public double area() {
 		return 0;
 	}
+
+	@Override
+	public double calculate() {
+		return area();
+	}
 }
 
-class Cube implements ShapeInterface, SolidShapeInterface {
+class Cube implements ShapeInterface, SolidShapeInterface, ManageShapeInterface {
 
 	@Override
 	public double area() {
@@ -33,5 +47,10 @@ class Cube implements ShapeInterface, SolidShapeInterface {
 	@Override
 	public double volume() {
 		return 0;
+	}
+
+	@Override
+	public double calculate() {
+		return area() + volume();
 	}
 }
