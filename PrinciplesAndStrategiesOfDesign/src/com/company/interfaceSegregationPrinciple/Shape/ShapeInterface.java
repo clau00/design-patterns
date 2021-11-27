@@ -1,4 +1,4 @@
-package com.company.interfaceSegregationPrinciple;
+package com.company.interfaceSegregationPrinciple.Shape;
 
 public interface ShapeInterface {
 
