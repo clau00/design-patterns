@@ -1,13 +1,10 @@
 package com.company.factorymethod.challenge;
 
-import java.lang.reflect.Method;
-import java.util.List;
-
-public interface Animal {
+public interface AnimalInterface {
 	public void makeSound();
 }
 
-class Duck implements Animal {
+class Duck implements AnimalInterface {
 
 	@Override
 	public void makeSound() {
@@ -15,7 +12,7 @@ class Duck implements Animal {
 	}
 }
 
-class Tiger implements Animal {
+class Tiger implements AnimalInterface {
 
 	@Override
 	public void makeSound() {

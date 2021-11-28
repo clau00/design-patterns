@@ -2,14 +2,17 @@ package com.company.factorymethod.challenge;
 
 public class MainApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		AnimalFactory animalFactory = new AnimalFactory();
+		AnimalFactoryInterface animalFactory = new AnimalFactoryImpl();
 
-		Animal duck = animalFactory.getAnimal("DUCK");
+		AnimalInterface duck = animalFactory.getAnimal("DUCK");
 		duck.makeSound();
 
-		Animal tiger = animalFactory.getAnimal("TIGER");
+		AnimalInterface tiger = animalFactory.getAnimal("TIGER");
+		tiger.makeSound();
+
+		AnimalInterface lion = animalFactory.getAnimal("LION");
 		tiger.makeSound();
 	}
 
