@@ -37,6 +37,9 @@ public class Client {
 	}
 
 	public static void main(String[] args) {
+
+		// the instantiation of the service is out of the Client class
+		
 		Service service = new ServiceA(); // the injector
 		Client client = new Client(service); // injects via the constructor
 		client.setService(service); // injects via setter
