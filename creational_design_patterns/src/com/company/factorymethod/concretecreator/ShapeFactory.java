@@ -1,7 +1,5 @@
 package com.company.factorymethod.concretecreator;
 
-import java.awt.*;
-
 public class ShapeFactory {
 
 	// use getShape method to get object of type shape
