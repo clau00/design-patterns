@@ -13,7 +13,7 @@ public class MainApp {
 		tiger.makeSound();
 
 		AnimalInterface lion = animalFactory.getAnimal("LION");
-		tiger.makeSound();
+		lion.makeSound();
 	}
 
 }
