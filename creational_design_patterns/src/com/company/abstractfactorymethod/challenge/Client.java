@@ -13,8 +13,8 @@ public class Client {
 		System.out.println(bAction.getMovieName());
 
 		MovieFactoryInterface comedyMovies = FactoryProducer.getFactory("COMEDY");
-		HollywoodMovieInterface hComedy = actionMovies.getHollywoodMovie();
-		BollywoodMovieInterface bComedy = actionMovies.getBollywoodMovie();
+		HollywoodMovieInterface hComedy = comedyMovies.getHollywoodMovie();
+		BollywoodMovieInterface bComedy = comedyMovies.getBollywoodMovie();
 
 		System.out.println("\n  Comedy movies are: ");
 		System.out.println(hComedy.getMovieName());
