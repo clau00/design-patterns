@@ -1,4 +1,4 @@
-package com.company.singleton.lazyinitialization;
+package com.company.singleton._1lazyinitialization;
 
 public class SingletonApp {
 

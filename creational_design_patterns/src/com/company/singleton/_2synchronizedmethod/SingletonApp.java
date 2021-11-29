@@ -1,6 +1,6 @@
-package com.company.singleton.synchronizedmethod;
+package com.company.singleton._2synchronizedmethod;
 
-import com.company.singleton.lazyinitialization.Singleton;
+import com.company.singleton._1lazyinitialization.Singleton;
 
 public class SingletonApp {
 

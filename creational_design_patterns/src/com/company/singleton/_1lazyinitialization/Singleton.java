@@ -1,12 +1,9 @@
-package com.company.singleton.synchronizedmethod;
+package com.company.singleton._1lazyinitialization;
 
 public class Singleton {
 
-	// by adding the synchronized keyword to getInstance(),
-	// we force every thread to wait its turn before it can enter the method
-
-	// PROBLEM: bottleneck, all the threads will wait for the check on whether the object already exists
-	// we only need to synchronize this the first time (until the instance is created)
+	// lazy implementation means we will not create it unless we will need it (calling getInstance())
+	// PROBLEM(when the singleton has state - other fields): is not thread safe!!!
 
 	// the private static reference to the one and only instance
 	private static Singleton uniqueInstance = null;
@@ -17,7 +14,7 @@ public class Singleton {
 	// the constructor, must be defined as private
 	private Singleton() {}
 
-	public static synchronized Singleton getInstance() {
+	public static Singleton getInstance() {
 		if(uniqueInstance == null) {
 			uniqueInstance = new Singleton();
 		}
